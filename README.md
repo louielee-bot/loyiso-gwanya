@@ -1,7 +1,7 @@
 # Loyiso Gwanya — GitHub Pages fallback
 
-This repository is a static backup of the public homepage at [louielee.zo.space](https://louielee.zo.space/).
+This is a static backup of the public homepage at https://louielee.zo.space/.
 
-The Zo Space remains the live operating system. This Pages deployment is the public fallback for the homepage when Zo is unavailable.
+Live fallback: https://louielee-bot.github.io/loyiso-gwanya/
 
-The static copy preserves the homepage's content and visual bundle. Interactive Zo-only routes such as the portal, CRM, booking, commission, reviews submission, and chatbot API are not available in static mode.
+The Zo Space remains the live, interactive version. This GitHub Pages copy is the dependable public fallback: it keeps the current identity, story, projects, services, contact links, CV link, and navigation in one self-contained `index.html`.
