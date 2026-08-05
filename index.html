@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" data-zo-default-seo="true" content="Loyiso Gwanya's African-centered creative operating system: storytelling, AI systems, filmmaking, brand strategy, and live projects." />
+    <meta name="author" content="Zo" />
+    <meta name="theme-color" content="#09090b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zo Space" />
+    <meta property="og:title" data-zo-default-seo="true" content="Loyiso Livingstone Gwanya — Creative Director &amp; AI Storyteller" />
+    <meta property="og:description" data-zo-default-seo="true" content="Loyiso Gwanya's African-centered creative operating system: storytelling, AI systems, filmmaking, brand strategy, and live projects." />
+    <meta property="og:url" data-zo-default-seo="true" content="https://louielee.zo.space/" />
+    <meta property="og:image" data-zo-default-seo="true" content="https://zo.computer/api/space-og?handle=louielee&path=%2F" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" data-zo-default-seo="true" content="Loyiso Livingstone Gwanya — Creative Director &amp; AI Storyteller" />
+    <meta name="twitter:description" data-zo-default-seo="true" content="Loyiso Gwanya's African-centered creative operating system: storytelling, AI systems, filmmaking, brand strategy, and live projects." />
+    <meta name="twitter:image" data-zo-default-seo="true" content="https://zo.computer/api/space-og?handle=louielee&path=%2F" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title data-zo-default-seo="true">Loyiso Livingstone Gwanya — Creative Director &amp; AI Storyteller</title>
+    <script type="module" crossorigin src="/assets/index-DOhsO7Xz.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BcyI7asK.css">
+  <script>window.__ZO_SITE_SETTINGS__={"site_title":"Loyiso Livingstone Gwanya · Creative Director & AI Storyteller","site_description":"Operating system for Loyiso's creative work — music, film, brand, and AI. Commission projects, read reviews, sign in to the private portal."}</script>
+<script>window.__ZO_PAGES_META__={"/":{"page_title":"Loyiso Livingstone Gwanya — Creative Director & AI Storyteller","page_description":"Loyiso Gwanya's African-centered creative operating system: storytelling, AI systems, filmmaking, brand strategy, and live projects."}}</script>
+<script>
+(function() {
+  try { window.parent.postMessage({ type: 'zo-site-loaded' }, '*'); } catch(e) {}
+
+  var _lastPath = '';
+  function reportPath() {
+    var p = location.pathname + location.search + location.hash;
+    if (p !== _lastPath) {
+      _lastPath = p;
+      try { window.parent.postMessage({ type: 'zo-site-navigate', path: p }, '*'); } catch(e) {}
+    }
+  }
+  reportPath();
+  var _origPush = history.pushState;
+  var _origReplace = history.replaceState;
+  history.pushState = function() { _origPush.apply(this, arguments); reportPath(); };
+  history.replaceState = function() { _origReplace.apply(this, arguments); reportPath(); };
+  window.addEventListener('popstate', reportPath);
+
+  const originalConsole = {
+    log: console.log,
+    error: console.error,
+    warn: console.warn,
+    info: console.info,
+    debug: console.debug
+  };
+
+  function sendLog(level, args) {
+    try {
+      const message = args.map(arg => {
+        if (typeof arg === 'string') return arg;
+        if (arg instanceof Error) return arg.message;
+        try { return JSON.stringify(arg); } catch { return String(arg); }
+      }).join(' ');
+
+      let stack = undefined;
+      if (level === 'error') {
+        for (const arg of args) {
+          if (arg instanceof Error && arg.stack) {
+            stack = arg.stack;
+            break;
+          }
+        }
+      }
+
+      fetch('/__zo_log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          level,
+          message,
+          timestamp: new Date().toISOString(),
+          url: window.location.href,
+          stack
+        })
+      }).catch(() => {});
+    } catch {}
+  }
+
+  ['log', 'error', 'warn', 'info', 'debug'].forEach(level => {
+    console[level] = function(...args) {
+      originalConsole[level].apply(console, args);
+      sendLog(level, args);
+    };
+  });
+
+  window.addEventListener('error', (e) => {
+    sendLog('error', [e.error || e.message]);
+  });
+
+  window.addEventListener('unhandledrejection', (e) => {
+    sendLog('error', [e.reason || 'Unhandled promise rejection']);
+  });
+})();
+</script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
