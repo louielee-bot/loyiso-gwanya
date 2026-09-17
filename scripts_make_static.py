@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-root = Path('/home/.z/workspaces/con_COY27Dd4yLdi20EL/github-fresh')
+root = Path(__file__).resolve().parent
 files = [
     'index.html',
     'book/index.html',
